@@ -27,13 +27,13 @@
           api.getRestList(apiName, version, function(result){
             apis[i].rest = [];
             result.forEach(function(entry){
-              apis[i].rest.push(entry.service_name);
+              apis[i].rest.push(entry);
             });
           });
           api.getRpcList(apiName, version, function(result){
             apis[i].rpc = [];
             result.forEach(function(entry){
-              apis[i].rpc.push(entry.service_name);
+              apis[i].rpc.push(entry);
             });
           });
           return;
