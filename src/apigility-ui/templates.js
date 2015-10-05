@@ -74,7 +74,7 @@ angular.module("apigility-ui/api-module/api-module.html", []).run(["$templateCac
     "          </tr>\n" +
     "        </thead>\n" +
     "        <tr ng-repeat=\"rest in vm.rest\">\n" +
-    "          <td><a ui-sref=\"ag.rest({api: vm.apiName, ver: vm.version, rest: rest.service_name})\" ng-click=\"vm.setSelected('api'+vm.apiName+'rest'+rest.service_name)\">{{rest.service_name}}</a></td>\n" +
+    "          <td><a ui-sref=\"ag.rest({api: vm.apiName, ver: vm.version, rest: rest.controller_service_name})\" ng-click=\"vm.setSelected('api'+vm.apiName+'rest'+rest.service_name)\">{{rest.service_name}}</a></td>\n" +
     "          <td>{{rest.route_match}}</td>\n" +
     "          <td>\n" +
     "            <a href=\"\" ng-if=\"!rest._embedded.documentation.description\" ng-hide=\"vm.disabled\">Add a description for this service</a>\n" +
@@ -99,7 +99,7 @@ angular.module("apigility-ui/api-module/api-module.html", []).run(["$templateCac
     "          </tr>\n" +
     "        </thead>\n" +
     "        <tr ng-repeat=\"rpc in vm.rpc\">\n" +
-    "          <td><a ui-sref=\"ag.rpc({api: vm.apiName, ver: vm.version, rpc: rpc.service_name})\" ng-click=\"vm.setSelected('api'+vm.apiName+'rpc'+rpc.service_name)\">{{rpc.service_name}}</a></td>\n" +
+    "          <td><a ui-sref=\"ag.rpc({api: vm.apiName, ver: vm.version, rpc: rpc.controller_service_name})\" ng-click=\"vm.setSelected('api'+vm.apiName+'rpc'+rpc.service_name)\">{{rpc.service_name}}</a></td>\n" +
     "          <td>{{rpc.route_match}}</td>\n" +
     "          <td>\n" +
     "            <a href=\"\" ng-if=\"!rpc._embedded.documentation.description\" ng-hide=\"vm.disabled\">Add a description for this service</a>\n" +
