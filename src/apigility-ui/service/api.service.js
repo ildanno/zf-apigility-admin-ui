@@ -400,13 +400,13 @@
       });
     };
 
-    this.saveRestField = function(module, version, restname, fields, callback) {
+    this.saveRestField = function(module, version, controller, fields, callback) {
       angular.forEach(fields, function (field, key) {
         if (field.hasOwnProperty('error_message') && ! field.error_message) {
           delete field.error_message;
         }
       });
-      xhr.save(agApiPath + '/module/' + module + '/rest/' + module + '-V' + version + '-Rest-' + capitalizeFirstLetter(restname) + '-Controller/input-filter', fields)
+      xhr.save(agApiPath + '/module/' + module + '/rest/' + controller + '/input-filter', fields)
       .then(function(response) {
         growl.success('Saved field');
         // Remove unused properties from the response
