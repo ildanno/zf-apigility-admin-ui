@@ -162,7 +162,7 @@
 
     this.deleteRest = function(module, version, name, isDoctrine, recursive, callback) {
       var path = isDoctrine ? 'doctrine' : 'rest';
-      xhr.remove(agApiPath + '/module/' + module + '/' + path + '/' + module + '-V' + version + '-Rest-' + capitalizeFirstLetter(name) + '-Controller?recursive=' + (recursive ? 1 : 0))
+      xhr.remove(agApiPath + '/module/' + module + '/' + path + '/' + name + '?recursive=' + (recursive ? 1 : 0))
         .then(function (response) {
           growl.success('Service deleted');
           return callback(false, response);
